@@ -8,17 +8,24 @@
     "ng": "ng",
     "start": "ng serve -o",
     "build": "ng build",
+    "lint": "npm run lint:ts && npm run lint:scss",
+    "lint:ts": "ng lint",
+    "lint:scss": "sass-lint -v -q",
+    "lint:fix": "npm run lint:ts:fix && npm run lint:scss:fix",
+    "lint:ts:fix": "ng lint --fix",
+    "lint:scss:fix": "sass-lint-auto-fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run test:coverage"
+      "pre-commit": "npm run lint && npm run lint:fix",
+      "pre-push": "npm run test:coverage"
     }
   },
+  "sasslintConfig": ".sasslintrc.json",
   "dependencies": {
     "@angular/animations": "~10.0.6",
     "@angular/common": "~10.0.6",
@@ -47,6 +54,8 @@
     "jest": "^26.4.2",
     "jest-preset-angular": "^8.3.1",
     "protractor": "~7.0.0",
+    "sass-lint": "^1.13.1",
+    "sass-lint-auto-fix": "^0.21.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
