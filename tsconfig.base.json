@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -16,5 +15,17 @@
       "es2018",
       "dom"
     ]
+  },
+  "paths": {
+    "@assets/*": ["./src/assets/*"],
+    "@env": ["./src/environments/*"],
+    "@directives/*": ["./src/app/shared/directives/*"],
+    "@pipes/*": ["./src/app/app/shared/pipes/*"],
+    "@providers/*": ["./src/app/app/shared/providers/*"],
+    "@services/*": ["./src/app/shared/services/*"],
+    "@utils/*": ["./src/app/shared/utils/*"],
+    // Makes TypeScript compiler resolve the new path.
+    // Issue: https://github.com/zloirock/core-js/issues/412
+    "core-js/es7/reflect": ["node_modules/core-js/proposals/reflect-metadata"]
   }
 }

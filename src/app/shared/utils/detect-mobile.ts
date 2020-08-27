@@ -1,6 +1,7 @@
 import { Inject } from '@angular/core';
 
-import { WINDOW } from './../providers';
+import { WINDOW } from '@shared/providers';
+
 
 export class DetectMobileDevice {
 
