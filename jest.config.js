@@ -12,8 +12,7 @@ module.exports = {
   'testPathIgnorePatterns': [
     '<rootDir>/node_modules',
     '<rootDir>/dist/',
-    '<rootDir>/cypress/',
-    '<rootDir>/src/test.ts'
+    '<rootDir>/cypress/'
   ],
   "coverageThreshold": {
     "global": {
@@ -24,12 +23,12 @@ module.exports = {
     }
   },
   "moduleNameMapper": {
-    "^@env$": "<rootDir>/src/environments/environment.ts",
-    "^@core/(.*)$": "<rootDir>/src/app/core/$1",
-    "^@modules/(.*)$": "<rootDir>/src/app/modules/$1",
-    "^@rest/(.*)$": "<rootDir>/src/app/rest/$1",
-    "^@shared/(.*)$": "<rootDir>/src/app/shared/$1",
-    "^@store/(.*)$": "<rootDir>/src/app/store/$1",
-    "^@assets/(.*)$": "<rootDir>/src/assets/$1"
+    "^@assets/(.*)$": "<rootDir>/src/assets/$1",
+    "^@env$": "<rootDir>/src/environments/$1",
+    "^@directives/(.*)$": "<rootDir>/src/app/shared/directives/$1",
+    "^@pipes/(.*)$": "<rootDir>/src/app/shared/pipes/$1",
+    "^@providers/(.*)$": "<rootDir>/src/app/shared/providers/$1",
+    "^@services/(.*)$": "<rootDir>/src/app/shared/services/$1",
+    "^@utils/(.*)$": "<rootDir>/src/app/shared/utils/$1"
   }
 };
