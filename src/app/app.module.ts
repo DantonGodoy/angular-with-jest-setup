@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { NewComponentComponent } from './new-component/new-component.component';
+import { NameCheckerComponent } from './name-checker/name-checker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewComponentComponent
+    NewComponentComponent,
+    NameCheckerComponent
   ],
   imports: [
     BrowserModule,
